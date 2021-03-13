@@ -30,7 +30,7 @@ p {
 }
 .features {
   width: 100%;
-  /* min-height: 100vh; */
+   min-height: 150vh; 
   background-image: url(./images/illustration-intro.png);
   background-size: 50% 50%;
   background-repeat: no-repeat;
@@ -57,13 +57,13 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding-top: 1rem;
 }
 .logo {
   flex: 3;
 }
-.logo svg {
-  color: white;
-  /* width: 60%; */
+.logo img {
+    width: 15%;
 }
 ul {
   list-style: none;
@@ -82,13 +82,13 @@ li a:hover {
   text-decoration: underline;
 }
 .features-text {
-  width: 305;
-  margin: auto;
-  margin-top: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: absolute;
+  z-index: 5;
+  transform: translate(34%, 288%);
 }
 .features-text h2 {
   color: white;
@@ -101,6 +101,19 @@ li a:hover {
   text-align: center;
   padding: 1rem;
 }
+.bg {
+  background-image: url(./images/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  z-index: -2;
+  width: 100%;
+  height: 31vh;
+  top: 62%;
+  left: -16%;
+  transform: translate(16%, 352%);
+}
+
 
 .myButton {
   background-image: linear-gradient(
@@ -127,13 +140,9 @@ li a:hover {
 .team {
   background-color: hsl(218, 28%, 13%);
   width: 100%;
+  
 }
-.curvy {
-  position: absolute;
-  top: 88%;
-  left: 4.9%;
-  z-index: -5;
-}
+
 .benefits {
   width: 60%;
   margin: auto;
@@ -141,7 +150,7 @@ li a:hover {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 2rem;
+  padding-top: 5rem;
 }
 .benefits h2,
 p {
@@ -208,9 +217,8 @@ p {
 }
 .quote {
   position: absolute;
-  top: 28%;
-  left: 1%;
   z-index: -1;
+  transform: translate(-1152%,-248%);
 }
 .tests h2 {
   font-size: 10px;
@@ -358,27 +366,45 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.facebook:hover,
-.twitter:hover,
-.instagram:hover {
-  background-color: hsl(176, 68%, 64%);
+.media:hover {
+  fill: hsl(176, 68%, 64%);
   cursor: pointer;
 }
-@media screen and (max-width: 1441px) {
+@media only screen and (max-width: 1441px) {
   .curvy {
     position: absolute;
     top: 92%;
     left: 0.9%;
     z-index: -5;
   }
+  .bg {
+    background-image: url(./images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: -2;
+    width: 100%;
+    height: 31vh;
+    top: 62%;
+    left: -16%;
+    transform: translate(16%, 352%);
+}
+.features-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 5;
+  transform: translate(34%, 345%);
+}
   .productivity-text h2 {
     font-size: 2rem;
     padding: 1rem 2rem;
   }
   .quote {
     position: absolute;
-    top: 27%;
-    left: 1%;
+    transform: translate(-1086%, -223%);
     z-index: -1;
   }
   .para {
@@ -390,71 +416,33 @@ footer {
   .last-text p {
     width: 90%;
     font-size: 12px;
+    padding-left: 0.5rem;
   }
   .height {
     height: 189px;
     position: relative;
   }
-}
-@media screen and (max-width: 1351px) {
-  .tests h2 {
-    font-size: 8px;
+ 
+  .first, .third {
+    position: relative;
   }
-  .quote {
-    position: absolute;
-    top: 22%;
-    left: 1%;
-    z-index: -1;
+  .first {
+    transform: translateY(27%);
   }
-}
-@media screen and (max-width: 1251px) {
-  .curvy {
-    position: absolute;
-    top: 92%;
-    left: -17.1%;
-    z-index: -5;
+  .third{
+    transform: translateY(17%);
   }
-  .para {
-    font-size: 16px;
+  .second img {
+    margin-right: 1.2rem;
   }
-  .quote {
-    position: absolute;
-    top: 26%;
-    left: 1%;
-    z-index: -1;
-  }
-  last-text p {
-    width: 90%;
-    font-size: 10px;
-  }
-  .input {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .myButton2 {
-    width: 45%;
-    background-image: linear-gradient(
-      to right,
-      hsl(176, 68%, 64%),
-      hsl(198, 60%, 50%)
-    );
-    border-radius: 28px;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 10px;
-    padding: 14px 50px;
-    text-decoration: none;
+  .social-media li {
+    padding: 0rem 0.3rem;
   }
 }
-@media screen and (max-width: 1025px) {
-  .curvy {
-    position: absolute;
-    top: 82%;
-    left: -35.1%;
-    z-index: -5;
+@media only screen and (max-width: 1025px) {
+ 
+  .features-text {
+    transform: translate(7%, 533%);
   }
   .para {
     font-size: 13px;
@@ -464,8 +452,7 @@ footer {
   }
   .quote {
     position: absolute;
-    top: 32%;
-    left: 1%;
+    transform: translate(-759%, -195%);
     z-index: -1;
   }
   .early-access p {
@@ -493,17 +480,15 @@ footer {
     margin-top: 9px;
   }
   .last-text p {
-    width: 90%;
-    font-size: 8px;
-  }
+    width: 100%;
+    font-size: 14px;
 }
-@media screen and (max-width: 769px) {
-  .curvy {
-    position: absolute;
-    top: 44%;
-    left: -68.1%;
-    z-index: -5;
-  }
+}
+@media only screen and (max-width: 769px) {
+ 
+  .features-text {
+    transform: translate(23%, 591%);
+}
   .features-text h2 {
     font-size: 21px;
   }
@@ -520,7 +505,7 @@ footer {
     font-size: 10px;
   }
   .quote {
-    top: 36%;
+    transform: translate(-558%,-197%);
   }
   .early-access p {
     font-size: 0.8rem;
@@ -553,24 +538,27 @@ footer {
     width: 132%;
   }
 }
-@media screen and (max-width: 415px) {
-  .curvy {
-    position: absolute;
-    top: 38%;
-    left: -180.1%;
-    z-index: -5;
-  }
+@media only screen and (max-width: 415px) {
+  
   .logo {
     flex: 1;
   }
-  .logo svg {
-    color: white;
+  .logo img {
+    width: 75%;
   }
   nav ul {
     flex: 1;
     justify-content: space-around;
     align-items: center;
   }
+  .features-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 5;
+    transform: translate(16%, 684%);}
   .features-text h2 {
     color: white;
     font-size: 10px;
@@ -581,6 +569,9 @@ footer {
     font-size: 0.57rem;
     text-align: center;
     padding: 0.2rem;
+  }
+  .bg {
+    background-image: url(./images/bg-curvy-mobile.svg);
   }
   .benefits {
     width: 100%;
@@ -612,9 +603,8 @@ footer {
   }
   .quote {
     position: absolute;
-    top: 22%;
-    left: 15%;
     z-index: -1;
+    transform: translate(-215%,-412%);
   }
   .productivity-text h2 {
     font-size: 30px;
@@ -657,22 +647,38 @@ footer {
   }
   .container1 {
     display: flex;
-    width: 90%;
+    width: 100%;
     margin: auto;
-    flex-direction: column;
+     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
+  .last, .second, .first,.third, .last-text {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+  }
+
+  .last {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .last img {
+    width: 25%;
+    margin-left: 15px;
+  }
+  .last-text p {
+    font-size: 13px;
+    padding-left: 0.5rem;
+}
   .myButton2 {
     width: 138%;
   }
 }
-@media screen and (max-width: 376px) {
-  .curvy {
-    position: absolute;
-    top: 37%;
-    left: -209.1%;
-    z-index: -5;
+@media only screen and (max-width: 376px) {
+  
+  .features-text{
+    transform: translate(16%, 653%);
   }
   .features-text h2 {
     color: white;
@@ -690,8 +696,7 @@ footer {
   }
   .quote {
     position: absolute;
-    top: 16%;
-    left: 15%;
+    transform: translate(-190%,-394%);
     z-index: -1;
   }
   .tests h2 {
@@ -707,14 +712,4 @@ footer {
     width: 173%;
   }
 }
-@media screen and (max-width: 361px) {
-  .quote {
-    position: absolute;
-    top: 20%;
-    left: 15%;
-    z-index: -1;
-  }
-  .early-access p {
-    font-size: 12px;
-  }
-}
+
